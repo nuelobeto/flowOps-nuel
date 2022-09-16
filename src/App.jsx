@@ -7,7 +7,7 @@ const App = () => {
     <Router>
       <Routes>
         <Route
-          path="/"
+          path="/dashboard"
           element={
             <Suspense fallback={<h1>Loading</h1>}>
               <Deck />
