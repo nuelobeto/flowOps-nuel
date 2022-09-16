@@ -5,8 +5,9 @@ import Pulse from "react-reveal/Pulse";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
-const SignUp = () => {
+const Login = () => {
   const [loading, setloading] = useState(false);
+
   return (
     <main className="auth-main">
       <Pulse>
@@ -16,24 +17,10 @@ const SignUp = () => {
               <div className="auth-logo">
                 <img src={logo} alt="flowOps" />
               </div>
-              <h2>Create your free account</h2>
-              <p>
-                Join thousands of teams and individuals already working better
-                and faster with flow0ps.
-              </p>
+              <h2>Welcome back</h2>
             </div>
 
             <form className="auth-form">
-              <div className="form-group">
-                <label htmlFor="firstName">First Name</label>
-                <input type="text" id="firstName" />
-              </div>
-
-              <div className="form-group">
-                <label htmlFor="lastName">Last Name</label>
-                <input type="text" id="lastName" />
-              </div>
-
               <div className="form-group">
                 <label htmlFor="email">Email Address</label>
                 <input type="email" id="email" />
@@ -45,7 +32,7 @@ const SignUp = () => {
               </div>
 
               <button type="submit" disabled={loading} hidden={loading}>
-                Sign Up
+                Login
               </button>
               {loading && (
                 <Puff
@@ -62,7 +49,7 @@ const SignUp = () => {
             </form>
           </div>
           <p className="alt-action">
-            Already have an account? <Link to="/">Login</Link>
+            Don't have an account? <Link to="/register">Sign Up</Link>
           </p>
         </div>
       </Pulse>
@@ -70,4 +57,4 @@ const SignUp = () => {
   );
 };
 
-export default SignUp;
+export default Login;
