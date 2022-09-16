@@ -1,0 +1,9 @@
+.side-bar {
+  width: 20vw;
+  height: 100vh;
+  background-color: var(--primary-color);
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 2;
+}
