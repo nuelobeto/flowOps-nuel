@@ -20,3 +20,7 @@ header {
   padding: 10px 1rem;
   gap: 20px;
 }
+
+.project-name svg {
+  fill: var(--white);
+}
