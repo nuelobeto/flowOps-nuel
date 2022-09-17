@@ -1,0 +1,124 @@
+.auth-main {
+  max-width: 100vw;
+  min-height: 100vh;
+  background-color: var(--primary-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 2rem;
+}
+
+.auth-box-wrapper {
+  max-width: 550px;
+  width: 100%;
+}
+
+.auth-box-inner {
+  width: 100%;
+  background-color: var(--white);
+  padding: 2rem 2.5rem;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.auth-box-header {
+  padding: 0 0 1rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.auth-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.auth-box-header h2 {
+  margin: 0.5rem 0;
+}
+
+.auth-box-header p {
+  width: 80%;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.auth-form .form-group {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.auth-form label {
+  color: #121212;
+  font-weight: bold;
+}
+
+.auth-form input {
+  height: 55px;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  background-color: rgba(134, 146, 166, 0.1);
+  border-radius: 6px;
+  padding-left: 10px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  font-size: 15px;
+  color: #121212;
+}
+
+.forgot {
+  align-self: flex-start;
+  margin: 0 0 1rem 0;
+}
+
+.forgot a {
+  color: #121212;
+}
+
+.auth-form button {
+  padding: 22px 40px;
+  background: var(--primary-color);
+  border-radius: 8px;
+  color: var(--white);
+  border: none;
+  cursor: pointer;
+  text-align: center;
+}
+
+.alt-action {
+  color: #fff;
+  text-align: center;
+  font-size: 17px;
+  margin: 10px 0 0;
+}
+
+.alt-action a {
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+  color: #fff;
+}
+
+.confirm-btn {
+  padding: 20px 30px;
+  background: var(--primary-color);
+  border-radius: 8px;
+  color: var(--white);
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  font-weight: bold;
+  font-size: 17px;
+  margin: 0 auto;
+  display: block;
+}

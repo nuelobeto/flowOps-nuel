@@ -1,8 +1,9 @@
-import "../../assests/css/main.css";
+import "../../assests/css/dashboardmain.css";
 
 const Main = () => {
   return (
-    <main>
+    <main className="dashboard-main">
+      <div className="space"></div>
       <div className="wrapper"></div>
     </main>
   );
