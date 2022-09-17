@@ -31,6 +31,10 @@ const Login = () => {
                 <input type="password" id="password" />
               </div>
 
+              <h4 className="forgot">
+                <Link to="/reset">Forgot your password?</Link>
+              </h4>
+
               <button type="submit" disabled={loading} hidden={loading}>
                 Login
               </button>
@@ -48,6 +52,7 @@ const Login = () => {
               )}
             </form>
           </div>
+
           <p className="alt-action">
             Don't have an account? <Link to="/register">Sign Up</Link>
           </p>

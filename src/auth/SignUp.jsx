@@ -61,6 +61,7 @@ const SignUp = () => {
               )}
             </form>
           </div>
+
           <p className="alt-action">
             Already have an account? <Link to="/">Login</Link>
           </p>
