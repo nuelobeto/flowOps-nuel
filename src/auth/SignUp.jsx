@@ -2,11 +2,62 @@ import "../assests/css/auth.css";
 import logo from "../assests/images/flowOpsLogo.svg";
 import { Puff } from "react-loader-spinner";
 import Pulse from "react-reveal/Pulse";
-import { useState } from "react";
-import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
+import { register } from "./../feature/authSlice";
+import { toast } from "react-toastify";
 
 const SignUp = () => {
-  const [loading, setloading] = useState(false);
+  const { error, loading, message, success } = useSelector(
+    (state) => state.auth
+  );
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  const [formData, setFormData] = useState({
+    firstname: "",
+    lastname: "",
+    email: "",
+    password: "",
+  });
+
+  const { firstname, lastname, email, password } = formData;
+
+  const handleChange = (event) => {
+    setFormData((prevState) => ({
+      ...prevState,
+      [event.target.name]: event.target.value,
+    }));
+  };
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+
+    if (!firstname || !lastname || !email || !password) {
+      toast.warn("Please ensure you fill all fields");
+    } else {
+      const userData = {
+        firstname,
+        lastname,
+        email,
+        password,
+      };
+
+      dispatch(register(userData));
+    }
+  };
+
+  useEffect(() => {
+    if (error) {
+      toast.error(message);
+    }
+
+    if (success) {
+      navigate("/success");
+    }
+  }, [success, error, navigate, message, dispatch]);
+
   return (
     <main className="auth-main">
       <Pulse>
@@ -23,25 +74,49 @@ const SignUp = () => {
               </p>
             </div>
 
-            <form className="auth-form">
+            <form className="auth-form" onSubmit={handleSubmit}>
               <div className="form-group">
-                <label htmlFor="firstName">First Name</label>
-                <input type="text" id="firstName" />
+                <label htmlFor="firstname">First Name</label>
+                <input
+                  type="text"
+                  id="firstname"
+                  name="firstname"
+                  value={firstname}
+                  onChange={handleChange}
+                />
               </div>
 
               <div className="form-group">
-                <label htmlFor="lastName">Last Name</label>
-                <input type="text" id="lastName" />
+                <label htmlFor="lastname">Last Name</label>
+                <input
+                  type="text"
+                  id="lastname"
+                  name="lastname"
+                  value={lastname}
+                  onChange={handleChange}
+                />
               </div>
 
               <div className="form-group">
                 <label htmlFor="email">Email Address</label>
-                <input type="email" id="email" />
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  value={email}
+                  onChange={handleChange}
+                />
               </div>
 
               <div className="form-group">
                 <label htmlFor="password">Password</label>
-                <input type="password" id="password" />
+                <input
+                  type="password"
+                  id="password"
+                  name="password"
+                  value={password}
+                  onChange={handleChange}
+                />
               </div>
 
               <button type="submit" disabled={loading} hidden={loading}>

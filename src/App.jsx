@@ -1,5 +1,8 @@
 import React, { Suspense } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 const SignUp = React.lazy(() => import("./auth/SignUp"));
 const Login = React.lazy(() => import("./auth/Login"));
 const Confirm = React.lazy(() => import("./auth/RegisterSuccess"));
@@ -42,6 +45,8 @@ const App = () => {
           }
         />
       </Routes>
+
+      <ToastContainer />
     </Router>
   );
 };
