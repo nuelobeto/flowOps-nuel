@@ -7,6 +7,13 @@
 :root {
   --primary-color: #171717;
   --white: #fff;
+  --green: #45db91;
+  --light-grey: #8692a61a;
+  --light-grey-2: #8692a60d;
+}
+
+body {
+  max-width: 100vw;
 }
 
 img {
@@ -21,12 +28,173 @@ a {
   text-decoration: none;
 }
 
+input {
+  outline: none;
+}
+
 .wrapper {
   width: 80%;
-  padding: 0 0 0 10px;
+  padding: 0 1.5rem 1.5rem;
 }
 
 .space {
   width: 20vw;
   min-width: 300px;
+}
+
+.wrapper-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 0;
+  position: relative;
+}
+
+.wrapper-header h1 {
+  font-size: 22px;
+}
+
+.wrapper-header-box {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.wrapper-header-box > button {
+  display: flex;
+  align-items: center;
+  background: none;
+  border: none;
+  outline: none;
+  gap: 1rem;
+  cursor: pointer;
+}
+
+.card {
+  box-shadow: 4px -4px 10px rgba(151, 151, 151, 0.25),
+    -4px 4px 10px rgba(151, 151, 151, 0.25);
+  border-radius: 8px;
+  padding: 1.5rem;
+}
+
+.online-status div:nth-child(1) {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.green-circle {
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background-color: var(--green);
+}
+
+.online-status h2 {
+  font-size: 18px;
+}
+
+.online-status p {
+  display: inline-block;
+  margin: 0.5rem 0 0.5rem 1.8rem;
+}
+
+.short-line {
+  width: 50px;
+  height: 2px;
+  background-color: var(--primary-color);
+  margin: 0.5rem 0 0 1.8rem;
+}
+
+.card-search {
+  position: relative;
+}
+
+.card-search input {
+  width: 250px;
+  height: 40px;
+  padding-left: 40px;
+  font-size: 15px;
+  border-radius: 4px;
+  border: 1px solid var(--light-grey-2);
+  outline: none;
+  background-color: var(--light-grey);
+}
+
+.card-search svg {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  margin-left: 10px;
+}
+
+.pagination {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 5px;
+}
+
+.pagination .page-num {
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+}
+
+.pagination .page-num:hover {
+  background-color: grey;
+  color: #fff;
+}
+
+.pagination .active {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+.rotateSVG svg {
+  transform: rotate(180deg);
+}
+
+.scroll::-webkit-scrollbar {
+  width: 8px;
+}
+
+.scroll::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.scroll::-webkit-scrollbar-thumb {
+  background-image: url("../src/assests/images/scroll-bar.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  border-radius: 10px;
+}
+
+.hide-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.form-group {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  gap: 10px;
+}
+
+.close-btn {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.close-btn svg {
+  width: 15px;
 }

@@ -1,7 +1,7 @@
 const DownArrow = () => {
   return (
     <svg
-      style={{ width: "12px", margin: "0 5px 0 0" }}
+      style={{ width: "12px" }}
       viewBox="0 0 16 10"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"

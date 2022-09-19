@@ -30,7 +30,7 @@ const SideBar = () => {
         </li>
 
         <li className="nav-item">
-          <NavLink to="/dashboard/uptime">
+          <NavLink to="/uptime">
             <div>
               <UptimeIcon />
               <span>Uptime</span>
@@ -42,7 +42,7 @@ const SideBar = () => {
         </li>
 
         <li className="nav-item">
-          <NavLink to="/dashboard/service-monitoring">
+          <NavLink to="/service-monitoring">
             <div>
               <ServiceMonitorIcon />
               <span>Service Monitoring</span>
@@ -51,7 +51,7 @@ const SideBar = () => {
         </li>
 
         <li className="nav-item">
-          <NavLink to="/dashboard/product-monitoring">
+          <NavLink to="/product-monitoring">
             <div>
               <ProductMonitoringIcon />
               <span>Product Monitoring</span>
@@ -60,7 +60,7 @@ const SideBar = () => {
         </li>
 
         <li className="nav-item">
-          <NavLink to="/dashboard/workflow">
+          <NavLink to="/workflow">
             <div>
               <WorkFlowsIcon />
               <span>Workflows</span>
