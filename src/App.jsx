@@ -7,6 +7,9 @@ const SignUp = React.lazy(() => import("./auth/SignUp"));
 const Login = React.lazy(() => import("./auth/Login"));
 const Confirm = React.lazy(() => import("./auth/RegisterSuccess"));
 const Deck = React.lazy(() => import("./dashboard/deck/Deck"));
+const ServiceMonitoring = React.lazy(() =>
+  import("./dashboard/service-monitoring/ServiceMonitoring")
+);
 
 const App = () => {
   return (
@@ -41,6 +44,14 @@ const App = () => {
           element={
             <Suspense fallback={<h1>Loading</h1>}>
               <Deck />
+            </Suspense>
+          }
+        />
+        <Route
+          path="/service-monitoring"
+          element={
+            <Suspense fallback={<h1>Loading</h1>}>
+              <ServiceMonitoring />
             </Suspense>
           }
         />
